@@ -1,3 +1,5 @@
+
+
 # QB Aggressiveness Model
 
 ## Objective
@@ -34,3 +36,166 @@ Primary metrics:
 - completion percentage over expected (CPOE)
 
 The goal is to separate aggressive decision-making from raw efficiency.
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+```{r load-packages}
+library(nflreadr)
+library(tidyverse)
+library(gt)
+```
+
+```{r load-data, cache=TRUE}
+#plays <- load_pbp(2015:nflreadr::most_recent_season())
+plays <- load_pbp(2025)
+```
+
+```{r create-passes, cache=TRUE}
+passes <- plays |>
+  filter(
+    play_type == "pass",
+    !is.na(air_yards),
+    !is.na(passer_player_name)
+  ) |>
+  mutate(
+    air_yard_bucket = case_when(
+      air_yards < 0 ~ "Behind LOS",
+      air_yards <= 9 ~ "Short",
+      air_yards <= 19 ~ "Intermediate",
+      air_yards >= 20 ~ "Deep"
+    ),
+    air_yard_bucket = factor(
+      air_yard_bucket,
+      levels = c(
+        "Behind LOS",
+        "Short",
+        "Intermediate",
+        "Deep"
+      )
+    )
+  )
+```
+
+
+## League Passing Environment
+
+Before evaluating quarterbacks individually, we first establish league-wide baseline performance by throw depth.
+
+This helps contextualize:
+- how difficult each throw type is
+- expected efficiency at each depth
+- what qualifies as above-average aggressive passing
+
+```{r depth-summary, cache=TRUE}
+depth_summary <- passes |>
+  group_by(air_yard_bucket) |>
+  summarise(
+    attempts = n(),
+    avg_epa = mean(epa, na.rm = TRUE),
+    completion_pct = mean(complete_pass == 1, na.rm = TRUE),
+    avg_yards_gained = mean(yards_gained, na.rm = TRUE) 
+  ) |>
+  arrange(air_yard_bucket)
+```
+```{r show-depth-summary}
+depth_summary |>
+  gt()
+```
+
+
+
+## QB Aggressiveness Leaderboard
+
+This leaderboard ranks quarterbacks by average air yards per attempt to identify which passers push the ball downfield most aggressively. Additional efficiency metrics help distinguish productive aggressiveness from inefficient high-risk passing.
+
+```{r create-qb-summary, cache=TRUE}
+qb_summary <- passes |>
+  group_by(passer_player_name) |>
+  summarise(
+    attempts = n(),
+    avg_air_yards = mean(air_yards, na.rm = TRUE),
+    deep_pass_rate = mean(air_yards >= 20, na.rm = TRUE),
+    epa_per_play = mean(epa, na.rm = TRUE),
+    completion_pct = mean(complete_pass == 1, na.rm = TRUE)
+  ) |>
+  filter(attempts >= 100) |>
+  arrange(desc(avg_air_yards))
+```
+
+```{r show-qb-aggressiveness-leaderboard}
+qb_summary |>
+  select(
+    passer_player_name,
+    attempts,
+    avg_air_yards,
+    deep_pass_rate,
+    epa_per_play,
+    completion_pct
+  ) |>
+  arrange(desc(avg_air_yards)) |>
+  slice_head(n = 15) |>
+  gt()
+```
+
+
+## Best Deep Passers
+
+These quarterbacks generated the most EPA above league average on deep throws. Minimum 25 deep attempts to ensure a stable sample size.
+
+```{r qb-vs-league, cache=TRUE}
+# Summarize each player by depth bucket
+qb_vs_league <- passes |>
+  group_by(passer_player_name, air_yard_bucket) |>
+  summarise(
+    attempts = n(),
+    avg_epa = mean(epa, na.rm = TRUE),
+    completion_pct = mean(complete_pass == 1, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  filter(attempts >= 25)
+```
+
+
+
+
+```{r qb-vs-league-delta, cache=TRUE}
+# Join QB results to league baselines and calculate deltas
+qb_vs_league <- qb_vs_league |>
+  left_join(
+    depth_summary |>
+      select(
+        air_yard_bucket,
+        league_epa = avg_epa,
+        league_completion_pct = completion_pct
+      ),
+    by = "air_yard_bucket"
+  ) |>
+  mutate(
+    epa_over_league = avg_epa - league_epa,
+    completion_over_league =
+      completion_pct - league_completion_pct
+  )
+```
+
+
+
+
+```{r show-best-deep-passers}
+qb_vs_league |>
+  filter(
+    air_yard_bucket == "Deep",
+    attempts >= 25
+  ) |>
+  arrange(desc(epa_over_league)) |>
+  slice_head(n = 15) |>
+  gt()
+```
+
