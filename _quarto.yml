@@ -1,0 +1,10 @@
+project:
+  type: website
+
+website:
+  title: "QB Aggressiveness Model"
+
+
+format:
+  html:
+    page-layout: full

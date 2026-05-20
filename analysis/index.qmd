@@ -1,0 +1,36 @@
+# QB Aggressiveness Model
+
+## Objective
+
+Measure quarterback aggressiveness using:
+
+- air yards
+- tight-window throws
+- deep pass rate
+- EPA
+
+## Initial Questions
+
+- Which QBs throw deepest?
+- Which QBs outperform expected completion probability?
+- How stable are aggressiveness metrics year to year?
+
+## Possible Future Questions
+
+- Which defensive coverages suppress aggressive passing most effectively?
+- Do certain defenses force quarterbacks into shorter, lower-EPA throws?
+- Can aggressiveness metrics help identify defensive scheme vulnerabilities?
+
+
+## Methodology
+
+This project evaluates quarterback aggressiveness using NFL play-by-play data from nflverse.
+
+Primary metrics:
+
+- average air yards
+- deep throw rate
+- EPA per attempt
+- completion percentage over expected (CPOE)
+
+The goal is to separate aggressive decision-making from raw efficiency.
