@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "analysis/index.html",
+    "href": "analysis/index.html",
+    "title": "QB Aggressiveness Model",
+    "section": "",
+    "text": "Measure quarterback aggressiveness using:\n\nair yards\ntight-window throws\ndeep pass rate\nEPA\n\n\n\n\n\nWhich QBs throw deepest?\nWhich QBs outperform expected completion probability?\nHow stable are aggressiveness metrics year to year?\n\n\n\n\n\nWhich defensive coverages suppress aggressive passing most effectively?\nDo certain defenses force quarterbacks into shorter, lower-EPA throws?\nCan aggressiveness metrics help identify defensive scheme vulnerabilities?\n\n\n\n\nThis project evaluates quarterback aggressiveness using NFL play-by-play data from nflverse.\nPrimary metrics:\n\naverage air yards\ndeep throw rate\nEPA per attempt\ncompletion percentage over expected (CPOE)\n\nThe goal is to separate aggressive decision-making from raw efficiency."
+  },
+  {
+    "objectID": "analysis/index.html#objective",
+    "href": "analysis/index.html#objective",
+    "title": "QB Aggressiveness Model",
+    "section": "",
+    "text": "Measure quarterback aggressiveness using:\n\nair yards\ntight-window throws\ndeep pass rate\nEPA"
+  },
+  {
+    "objectID": "analysis/index.html#initial-questions",
+    "href": "analysis/index.html#initial-questions",
+    "title": "QB Aggressiveness Model",
+    "section": "",
+    "text": "Which QBs throw deepest?\nWhich QBs outperform expected completion probability?\nHow stable are aggressiveness metrics year to year?"
+  },
+  {
+    "objectID": "analysis/index.html#possible-future-questions",
+    "href": "analysis/index.html#possible-future-questions",
+    "title": "QB Aggressiveness Model",
+    "section": "",
+    "text": "Which defensive coverages suppress aggressive passing most effectively?\nDo certain defenses force quarterbacks into shorter, lower-EPA throws?\nCan aggressiveness metrics help identify defensive scheme vulnerabilities?"
+  },
+  {
+    "objectID": "analysis/index.html#methodology",
+    "href": "analysis/index.html#methodology",
+    "title": "QB Aggressiveness Model",
+    "section": "",
+    "text": "This project evaluates quarterback aggressiveness using NFL play-by-play data from nflverse.\nPrimary metrics:\n\naverage air yards\ndeep throw rate\nEPA per attempt\ncompletion percentage over expected (CPOE)\n\nThe goal is to separate aggressive decision-making from raw efficiency."
+  }
+]
