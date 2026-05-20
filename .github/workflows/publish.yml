@@ -16,6 +16,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        
+      - name: Install R Packages
+        run: |
+          Rscript -e 'install.packages(c("tidyverse", "gt", "nflreadr"))'
+
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
