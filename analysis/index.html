@@ -126,6 +126,1744 @@ ul.task-list li input[type="checkbox"] {
 <li>completion percentage over expected (CPOE)</li>
 </ul>
 <p>The goal is to separate aggressive decision-making from raw efficiency.</p>
+</section>
+<section id="league-passing-environment" class="level2">
+<h2 class="anchored" data-anchor-id="league-passing-environment">League Passing Environment</h2>
+<p>Before evaluating quarterbacks individually, we first establish league-wide baseline performance by throw depth.</p>
+<p>This helps contextualize: - how difficult each throw type is - expected efficiency at each depth - what qualifies as above-average aggressive passing</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="riccydnxee" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#riccydnxee table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#riccydnxee thead, #riccydnxee tbody, #riccydnxee tfoot, #riccydnxee tr, #riccydnxee td, #riccydnxee th {
+  border-style: none;
+}
+
+#riccydnxee p {
+  margin: 0;
+  padding: 0;
+}
+
+#riccydnxee .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#riccydnxee .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#riccydnxee .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#riccydnxee .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#riccydnxee .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#riccydnxee .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#riccydnxee .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#riccydnxee .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#riccydnxee .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#riccydnxee .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#riccydnxee .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#riccydnxee .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#riccydnxee .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#riccydnxee .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#riccydnxee .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#riccydnxee .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#riccydnxee .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#riccydnxee .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#riccydnxee .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#riccydnxee .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#riccydnxee .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#riccydnxee .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#riccydnxee .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#riccydnxee .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#riccydnxee .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#riccydnxee .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#riccydnxee .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#riccydnxee .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#riccydnxee .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#riccydnxee .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#riccydnxee .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#riccydnxee .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#riccydnxee .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#riccydnxee .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#riccydnxee .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#riccydnxee .gt_left {
+  text-align: left;
+}
+
+#riccydnxee .gt_center {
+  text-align: center;
+}
+
+#riccydnxee .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#riccydnxee .gt_font_normal {
+  font-weight: normal;
+}
+
+#riccydnxee .gt_font_bold {
+  font-weight: bold;
+}
+
+#riccydnxee .gt_font_italic {
+  font-style: italic;
+}
+
+#riccydnxee .gt_super {
+  font-size: 65%;
+}
+
+#riccydnxee .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#riccydnxee .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#riccydnxee .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#riccydnxee .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#riccydnxee .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#riccydnxee .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#riccydnxee .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#riccydnxee .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#riccydnxee div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="air_yard_bucket" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">air_yard_bucket</th>
+<th id="attempts" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">attempts</th>
+<th id="avg_epa" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">avg_epa</th>
+<th id="completion_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">completion_pct</th>
+<th id="avg_yards_gained" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">avg_yards_gained</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="air_yard_bucket">Behind LOS</td>
+<td class="gt_row gt_right" headers="attempts">3225</td>
+<td class="gt_row gt_right" headers="avg_epa">-0.2048048</td>
+<td class="gt_row gt_right" headers="completion_pct">0.7665116</td>
+<td class="gt_row gt_right" headers="avg_yards_gained">4.329302</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="air_yard_bucket">Short</td>
+<td class="gt_row gt_right" headers="attempts">8976</td>
+<td class="gt_row gt_right" headers="avg_epa">0.1052636</td>
+<td class="gt_row gt_right" headers="completion_pct">0.7137923</td>
+<td class="gt_row gt_right" headers="avg_yards_gained">5.906640</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="air_yard_bucket">Intermediate</td>
+<td class="gt_row gt_right" headers="attempts">3933</td>
+<td class="gt_row gt_right" headers="avg_epa">0.3739041</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5316552</td>
+<td class="gt_row gt_right" headers="avg_yards_gained">9.208492</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">2154</td>
+<td class="gt_row gt_right" headers="avg_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="avg_yards_gained">11.785980</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="qb-aggressiveness-leaderboard" class="level2">
+<h2 class="anchored" data-anchor-id="qb-aggressiveness-leaderboard">QB Aggressiveness Leaderboard</h2>
+<p>This leaderboard ranks quarterbacks by average air yards per attempt to identify which passers push the ball downfield most aggressively. Additional efficiency metrics help distinguish productive aggressiveness from inefficient high-risk passing.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="wonoiuyuxi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wonoiuyuxi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wonoiuyuxi thead, #wonoiuyuxi tbody, #wonoiuyuxi tfoot, #wonoiuyuxi tr, #wonoiuyuxi td, #wonoiuyuxi th {
+  border-style: none;
+}
+
+#wonoiuyuxi p {
+  margin: 0;
+  padding: 0;
+}
+
+#wonoiuyuxi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wonoiuyuxi .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wonoiuyuxi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wonoiuyuxi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wonoiuyuxi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wonoiuyuxi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wonoiuyuxi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wonoiuyuxi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wonoiuyuxi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wonoiuyuxi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wonoiuyuxi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wonoiuyuxi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wonoiuyuxi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wonoiuyuxi .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wonoiuyuxi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wonoiuyuxi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wonoiuyuxi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wonoiuyuxi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wonoiuyuxi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wonoiuyuxi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wonoiuyuxi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wonoiuyuxi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wonoiuyuxi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wonoiuyuxi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wonoiuyuxi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wonoiuyuxi .gt_left {
+  text-align: left;
+}
+
+#wonoiuyuxi .gt_center {
+  text-align: center;
+}
+
+#wonoiuyuxi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wonoiuyuxi .gt_font_normal {
+  font-weight: normal;
+}
+
+#wonoiuyuxi .gt_font_bold {
+  font-weight: bold;
+}
+
+#wonoiuyuxi .gt_font_italic {
+  font-style: italic;
+}
+
+#wonoiuyuxi .gt_super {
+  font-size: 65%;
+}
+
+#wonoiuyuxi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wonoiuyuxi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wonoiuyuxi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wonoiuyuxi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wonoiuyuxi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wonoiuyuxi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wonoiuyuxi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wonoiuyuxi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wonoiuyuxi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="passer_player_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">passer_player_name</th>
+<th id="attempts" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">attempts</th>
+<th id="avg_air_yards" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">avg_air_yards</th>
+<th id="deep_pass_rate" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">deep_pass_rate</th>
+<th id="epa_per_play" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">epa_per_play</th>
+<th id="completion_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">completion_pct</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">M.Mariota</td>
+<td class="gt_row gt_right" headers="attempts">225</td>
+<td class="gt_row gt_right" headers="avg_air_yards">10.195556</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1777778</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.130084191</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6177778</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">M.Stafford</td>
+<td class="gt_row gt_right" headers="attempts">712</td>
+<td class="gt_row gt_right" headers="avg_air_yards">9.516854</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1615169</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.308769917</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6376404</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">D.Maye</td>
+<td class="gt_row gt_right" headers="attempts">612</td>
+<td class="gt_row gt_right" headers="avg_air_yards">9.354575</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1552288</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.382802230</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6928105</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">J.Hurts</td>
+<td class="gt_row gt_right" headers="attempts">487</td>
+<td class="gt_row gt_right" headers="avg_air_yards">9.004107</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1437372</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.156092399</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6447639</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">J.Love</td>
+<td class="gt_row gt_right" headers="attempts">484</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.966942</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1528926</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.337494897</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6508264</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">C.Williams</td>
+<td class="gt_row gt_right" headers="attempts">656</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.905488</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1570122</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.153200718</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5746951</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">R.Wilson</td>
+<td class="gt_row gt_right" headers="attempts">119</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.890756</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1596639</td>
+<td class="gt_row gt_right" headers="epa_per_play">-0.012892811</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5798319</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">L.Jackson</td>
+<td class="gt_row gt_right" headers="attempts">300</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.826667</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1366667</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.240648409</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6400000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">J.McCarthy</td>
+<td class="gt_row gt_right" headers="attempts">243</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.814815</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1440329</td>
+<td class="gt_row gt_right" headers="epa_per_play">-0.015589295</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5761317</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">T.Lawrence</td>
+<td class="gt_row gt_right" headers="attempts">587</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.804089</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1362862</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.169667638</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6115843</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">T.Taylor</td>
+<td class="gt_row gt_right" headers="attempts">133</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.609023</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1503759</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.040029129</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6015038</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">D.Mills</td>
+<td class="gt_row gt_right" headers="attempts">159</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.553459</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1069182</td>
+<td class="gt_row gt_right" headers="epa_per_play">-0.009904854</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5723270</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">T.Shough</td>
+<td class="gt_row gt_right" headers="attempts">324</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.361111</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1203704</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.164309617</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6820988</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">M.Penix</td>
+<td class="gt_row gt_right" headers="attempts">276</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.333333</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1268116</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.095202684</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6014493</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">C.Stroud</td>
+<td class="gt_row gt_right" headers="attempts">499</td>
+<td class="gt_row gt_right" headers="avg_air_yards">8.238477</td>
+<td class="gt_row gt_right" headers="deep_pass_rate">0.1082164</td>
+<td class="gt_row gt_right" headers="epa_per_play">0.146272742</td>
+<td class="gt_row gt_right" headers="completion_pct">0.6292585</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="best-deep-passers" class="level2">
+<h2 class="anchored" data-anchor-id="best-deep-passers">Best Deep Passers</h2>
+<p>These quarterbacks generated the most EPA above league average on deep throws. Minimum 25 deep attempts to ensure a stable sample size.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="rpkgfjbito" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rpkgfjbito table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rpkgfjbito thead, #rpkgfjbito tbody, #rpkgfjbito tfoot, #rpkgfjbito tr, #rpkgfjbito td, #rpkgfjbito th {
+  border-style: none;
+}
+
+#rpkgfjbito p {
+  margin: 0;
+  padding: 0;
+}
+
+#rpkgfjbito .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rpkgfjbito .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#rpkgfjbito .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#rpkgfjbito .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rpkgfjbito .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rpkgfjbito .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rpkgfjbito .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rpkgfjbito .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rpkgfjbito .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rpkgfjbito .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rpkgfjbito .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#rpkgfjbito .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rpkgfjbito .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rpkgfjbito .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rpkgfjbito .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rpkgfjbito .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rpkgfjbito .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rpkgfjbito .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rpkgfjbito .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rpkgfjbito .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rpkgfjbito .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rpkgfjbito .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#rpkgfjbito .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rpkgfjbito .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rpkgfjbito .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rpkgfjbito .gt_left {
+  text-align: left;
+}
+
+#rpkgfjbito .gt_center {
+  text-align: center;
+}
+
+#rpkgfjbito .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rpkgfjbito .gt_font_normal {
+  font-weight: normal;
+}
+
+#rpkgfjbito .gt_font_bold {
+  font-weight: bold;
+}
+
+#rpkgfjbito .gt_font_italic {
+  font-style: italic;
+}
+
+#rpkgfjbito .gt_super {
+  font-size: 65%;
+}
+
+#rpkgfjbito .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rpkgfjbito .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rpkgfjbito .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rpkgfjbito .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rpkgfjbito .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rpkgfjbito .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rpkgfjbito .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#rpkgfjbito .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#rpkgfjbito div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="passer_player_name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">passer_player_name</th>
+<th id="air_yard_bucket" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">air_yard_bucket</th>
+<th id="attempts" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">attempts</th>
+<th id="avg_epa" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">avg_epa</th>
+<th id="completion_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">completion_pct</th>
+<th id="league_epa" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">league_epa</th>
+<th id="league_completion_pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">league_completion_pct</th>
+<th id="epa_over_league" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">epa_over_league</th>
+<th id="completion_over_league" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">completion_over_league</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">L.Jackson</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">41</td>
+<td class="gt_row gt_right" headers="avg_epa">0.9131040</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4634146</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.49386911</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.101761895</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">S.Darnold</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">65</td>
+<td class="gt_row gt_right" headers="avg_epa">0.8739374</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4923077</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.45470249</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.130654953</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">B.Young</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">45</td>
+<td class="gt_row gt_right" headers="avg_epa">0.8613359</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4444444</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.44210104</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.082791705</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">D.Prescott</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">66</td>
+<td class="gt_row gt_right" headers="avg_epa">0.8417293</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4393939</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.42249442</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.077741200</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">D.Maye</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">95</td>
+<td class="gt_row gt_right" headers="avg_epa">0.7880721</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4526316</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.36883723</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.090978840</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">M.Stafford</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">115</td>
+<td class="gt_row gt_right" headers="avg_epa">0.6855588</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4086957</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.26632391</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.047042913</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">J.Goff</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">39</td>
+<td class="gt_row gt_right" headers="avg_epa">0.6824007</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4871795</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.26316582</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.125526748</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">J.Hurts</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">70</td>
+<td class="gt_row gt_right" headers="avg_epa">0.6184831</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3428571</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.19924818</td>
+<td class="gt_row gt_right" headers="completion_over_league">-0.018795596</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">D.Jones</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">37</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5950247</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4324324</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.17578985</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.070779693</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">B.Purdy</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">39</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5764937</td>
+<td class="gt_row gt_right" headers="completion_pct">0.5384615</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.15725886</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.176808799</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">P.Mahomes</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">66</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5675561</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3181818</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.14832118</td>
+<td class="gt_row gt_right" headers="completion_over_league">-0.043470921</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">C.Ward</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">55</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5503530</td>
+<td class="gt_row gt_right" headers="completion_pct">0.4000000</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.13111811</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.038347261</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">J.Love</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">74</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5496246</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3918919</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.13038972</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.030239153</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="passer_player_name">B.Nix</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">78</td>
+<td class="gt_row gt_right" headers="avg_epa">0.5321194</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3717949</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.11288453</td>
+<td class="gt_row gt_right" headers="completion_over_league">0.010142133</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="passer_player_name">J.Burrow</td>
+<td class="gt_row gt_center" headers="air_yard_bucket">Deep</td>
+<td class="gt_row gt_right" headers="attempts">28</td>
+<td class="gt_row gt_right" headers="avg_epa">0.4994807</td>
+<td class="gt_row gt_right" headers="completion_pct">0.3571429</td>
+<td class="gt_row gt_right" headers="league_epa">0.4192349</td>
+<td class="gt_row gt_right" headers="league_completion_pct">0.3616527</td>
+<td class="gt_row gt_right" headers="epa_over_league">0.08024579</td>
+<td class="gt_row gt_right" headers="completion_over_league">-0.004509882</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
 
 
 </section>
