@@ -89,6 +89,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="qb-aggressiveness-model" class="level1">
 <h1>QB Aggressiveness Model</h1>
+<p>Before we start, my true objective for this project is to expand my R and data analysis skills. I chose football because it’s always easier to learn when related to something you are passionate about. So yes, if anyone happens to read this and reconizes it’s not the most original idea, I know. That’s not the point. The point is to have fun and learn something new. If I can do that while also analyzing football, then it’s a win-win. If you happen to find any mistakes in my code or analysis, please let me know. I’m sure there will be plenty and I would love the feedback to improve. Oh, and Go Birds!</p>
 <section id="objective" class="level2">
 <h2 class="anchored" data-anchor-id="objective">Objective</h2>
 <p>Measure quarterback aggressiveness using:</p>
@@ -107,8 +108,8 @@ ul.task-list li input[type="checkbox"] {
 <li>How stable are aggressiveness metrics year to year?</li>
 </ul>
 </section>
-<section id="possible-future-questions" class="level2">
-<h2 class="anchored" data-anchor-id="possible-future-questions">Possible Future Questions</h2>
+<section id="additional-questions-to-analyze-in-the-future" class="level2">
+<h2 class="anchored" data-anchor-id="additional-questions-to-analyze-in-the-future">Additional Questions to Analyze in the Future</h2>
 <ul>
 <li>Which defensive coverages suppress aggressive passing most effectively?</li>
 <li>Do certain defenses force quarterbacks into shorter, lower-EPA throws?</li>
@@ -123,13 +124,13 @@ ul.task-list li input[type="checkbox"] {
 <li>average air yards</li>
 <li>deep throw rate</li>
 <li>EPA per attempt</li>
-<li>completion percentage over expected (CPOE)</li>
+<li>completion percentage over expected</li>
 </ul>
 <p>The goal is to separate aggressive decision-making from raw efficiency.</p>
 </section>
-<section id="league-passing-environment" class="level2">
-<h2 class="anchored" data-anchor-id="league-passing-environment">League Passing Environment</h2>
-<p>Before evaluating quarterbacks individually, we first establish league-wide baseline performance by throw depth.</p>
+<section id="league-passing-baselines-by-depth" class="level2">
+<h2 class="anchored" data-anchor-id="league-passing-baselines-by-depth">League Passing Baselines by Depth</h2>
+<p>Before evaluating quarterbacks individually we first establish league-wide baseline performance by throw depth.</p>
 <p>This helps contextualize:</p>
 <ul>
 <li>how difficult each throw type is</li>
@@ -138,23 +139,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="jlafksseri" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jlafksseri table {
+<div id="mcbgwjxomz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mcbgwjxomz table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jlafksseri thead, #jlafksseri tbody, #jlafksseri tfoot, #jlafksseri tr, #jlafksseri td, #jlafksseri th {
+#mcbgwjxomz thead, #mcbgwjxomz tbody, #mcbgwjxomz tfoot, #mcbgwjxomz tr, #mcbgwjxomz td, #mcbgwjxomz th {
   border-style: none;
 }
 
-#jlafksseri p {
+#mcbgwjxomz p {
   margin: 0;
   padding: 0;
 }
 
-#jlafksseri .gt_table {
+#mcbgwjxomz .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -180,12 +181,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#jlafksseri .gt_caption {
+#mcbgwjxomz .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jlafksseri .gt_title {
+#mcbgwjxomz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -197,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#jlafksseri .gt_subtitle {
+#mcbgwjxomz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -209,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#jlafksseri .gt_heading {
+#mcbgwjxomz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -221,13 +222,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#jlafksseri .gt_bottom_border {
+#mcbgwjxomz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jlafksseri .gt_col_headings {
+#mcbgwjxomz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -242,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#jlafksseri .gt_col_heading {
+#mcbgwjxomz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -262,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#jlafksseri .gt_column_spanner_outer {
+#mcbgwjxomz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,15 +275,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#jlafksseri .gt_column_spanner_outer:first-child {
+#mcbgwjxomz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jlafksseri .gt_column_spanner_outer:last-child {
+#mcbgwjxomz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jlafksseri .gt_column_spanner {
+#mcbgwjxomz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -294,11 +295,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#jlafksseri .gt_spanner_row {
+#mcbgwjxomz .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jlafksseri .gt_group_heading {
+#mcbgwjxomz .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -324,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#jlafksseri .gt_empty_group_heading {
+#mcbgwjxomz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -339,15 +340,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#jlafksseri .gt_from_md > :first-child {
+#mcbgwjxomz .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jlafksseri .gt_from_md > :last-child {
+#mcbgwjxomz .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jlafksseri .gt_row {
+#mcbgwjxomz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -366,7 +367,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#jlafksseri .gt_stub {
+#mcbgwjxomz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -379,7 +380,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#jlafksseri .gt_stub_row_group {
+#mcbgwjxomz .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,15 +394,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#jlafksseri .gt_row_group_first td {
+#mcbgwjxomz .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jlafksseri .gt_row_group_first th {
+#mcbgwjxomz .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jlafksseri .gt_summary_row {
+#mcbgwjxomz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -411,16 +412,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#jlafksseri .gt_first_summary_row {
+#mcbgwjxomz .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jlafksseri .gt_first_summary_row.thick {
+#mcbgwjxomz .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jlafksseri .gt_last_summary_row {
+#mcbgwjxomz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -430,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#jlafksseri .gt_grand_summary_row {
+#mcbgwjxomz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -440,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#jlafksseri .gt_first_grand_summary_row {
+#mcbgwjxomz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -450,7 +451,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#jlafksseri .gt_last_grand_summary_row_top {
+#mcbgwjxomz .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -460,11 +461,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#jlafksseri .gt_striped {
+#mcbgwjxomz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jlafksseri .gt_table_body {
+#mcbgwjxomz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -473,7 +474,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#jlafksseri .gt_footnotes {
+#mcbgwjxomz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -487,7 +488,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#jlafksseri .gt_footnote {
+#mcbgwjxomz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -496,7 +497,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#jlafksseri .gt_sourcenotes {
+#mcbgwjxomz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -510,7 +511,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#jlafksseri .gt_sourcenote {
+#mcbgwjxomz .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -518,72 +519,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#jlafksseri .gt_left {
+#mcbgwjxomz .gt_left {
   text-align: left;
 }
 
-#jlafksseri .gt_center {
+#mcbgwjxomz .gt_center {
   text-align: center;
 }
 
-#jlafksseri .gt_right {
+#mcbgwjxomz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jlafksseri .gt_font_normal {
+#mcbgwjxomz .gt_font_normal {
   font-weight: normal;
 }
 
-#jlafksseri .gt_font_bold {
+#mcbgwjxomz .gt_font_bold {
   font-weight: bold;
 }
 
-#jlafksseri .gt_font_italic {
+#mcbgwjxomz .gt_font_italic {
   font-style: italic;
 }
 
-#jlafksseri .gt_super {
+#mcbgwjxomz .gt_super {
   font-size: 65%;
 }
 
-#jlafksseri .gt_footnote_marks {
+#mcbgwjxomz .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jlafksseri .gt_asterisk {
+#mcbgwjxomz .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jlafksseri .gt_indent_1 {
+#mcbgwjxomz .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jlafksseri .gt_indent_2 {
+#mcbgwjxomz .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jlafksseri .gt_indent_3 {
+#mcbgwjxomz .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jlafksseri .gt_indent_4 {
+#mcbgwjxomz .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jlafksseri .gt_indent_5 {
+#mcbgwjxomz .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jlafksseri .katex-display {
+#mcbgwjxomz .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jlafksseri div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mcbgwjxomz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -633,29 +634,36 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<section id="interesting-observations" class="level4">
+<h4 class="anchored" data-anchor-id="interesting-observations">Interesting Observations</h4>
+<ul>
+<li>Deeper throws have the highest epa but lowest competion percentage.</li>
+<li>Throws behind the line of scrimmage are the only bucket with negative average EPA.</li>
+</ul>
+</section>
 </section>
 <section id="qb-aggressiveness-leaderboard" class="level2">
 <h2 class="anchored" data-anchor-id="qb-aggressiveness-leaderboard">QB Aggressiveness Leaderboard</h2>
 <p>This leaderboard ranks quarterbacks by average air yards per attempt to identify which passers push the ball downfield most aggressively. Additional efficiency metrics help distinguish productive aggressiveness from inefficient high-risk passing.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fxylyexvbe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fxylyexvbe table {
+<div id="kvhitmtedy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kvhitmtedy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fxylyexvbe thead, #fxylyexvbe tbody, #fxylyexvbe tfoot, #fxylyexvbe tr, #fxylyexvbe td, #fxylyexvbe th {
+#kvhitmtedy thead, #kvhitmtedy tbody, #kvhitmtedy tfoot, #kvhitmtedy tr, #kvhitmtedy td, #kvhitmtedy th {
   border-style: none;
 }
 
-#fxylyexvbe p {
+#kvhitmtedy p {
   margin: 0;
   padding: 0;
 }
 
-#fxylyexvbe .gt_table {
+#kvhitmtedy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -681,12 +689,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_caption {
+#kvhitmtedy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fxylyexvbe .gt_title {
+#kvhitmtedy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -698,7 +706,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#fxylyexvbe .gt_subtitle {
+#kvhitmtedy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -710,7 +718,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#fxylyexvbe .gt_heading {
+#kvhitmtedy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -722,13 +730,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_bottom_border {
+#kvhitmtedy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_col_headings {
+#kvhitmtedy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -743,7 +751,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_col_heading {
+#kvhitmtedy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -763,7 +771,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#fxylyexvbe .gt_column_spanner_outer {
+#kvhitmtedy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -775,15 +783,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#fxylyexvbe .gt_column_spanner_outer:first-child {
+#kvhitmtedy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fxylyexvbe .gt_column_spanner_outer:last-child {
+#kvhitmtedy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fxylyexvbe .gt_column_spanner {
+#kvhitmtedy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -795,11 +803,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#fxylyexvbe .gt_spanner_row {
+#kvhitmtedy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fxylyexvbe .gt_group_heading {
+#kvhitmtedy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -825,7 +833,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#fxylyexvbe .gt_empty_group_heading {
+#kvhitmtedy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -840,15 +848,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#fxylyexvbe .gt_from_md > :first-child {
+#kvhitmtedy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fxylyexvbe .gt_from_md > :last-child {
+#kvhitmtedy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fxylyexvbe .gt_row {
+#kvhitmtedy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -867,7 +875,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#fxylyexvbe .gt_stub {
+#kvhitmtedy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -880,7 +888,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fxylyexvbe .gt_stub_row_group {
+#kvhitmtedy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -894,15 +902,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#fxylyexvbe .gt_row_group_first td {
+#kvhitmtedy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fxylyexvbe .gt_row_group_first th {
+#kvhitmtedy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fxylyexvbe .gt_summary_row {
+#kvhitmtedy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -912,16 +920,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fxylyexvbe .gt_first_summary_row {
+#kvhitmtedy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_first_summary_row.thick {
+#kvhitmtedy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fxylyexvbe .gt_last_summary_row {
+#kvhitmtedy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -931,7 +939,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_grand_summary_row {
+#kvhitmtedy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -941,7 +949,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fxylyexvbe .gt_first_grand_summary_row {
+#kvhitmtedy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -951,7 +959,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_last_grand_summary_row_top {
+#kvhitmtedy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -961,11 +969,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_striped {
+#kvhitmtedy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fxylyexvbe .gt_table_body {
+#kvhitmtedy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -974,7 +982,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_footnotes {
+#kvhitmtedy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -988,7 +996,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_footnote {
+#kvhitmtedy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -997,7 +1005,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fxylyexvbe .gt_sourcenotes {
+#kvhitmtedy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1011,7 +1019,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fxylyexvbe .gt_sourcenote {
+#kvhitmtedy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1019,72 +1027,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fxylyexvbe .gt_left {
+#kvhitmtedy .gt_left {
   text-align: left;
 }
 
-#fxylyexvbe .gt_center {
+#kvhitmtedy .gt_center {
   text-align: center;
 }
 
-#fxylyexvbe .gt_right {
+#kvhitmtedy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fxylyexvbe .gt_font_normal {
+#kvhitmtedy .gt_font_normal {
   font-weight: normal;
 }
 
-#fxylyexvbe .gt_font_bold {
+#kvhitmtedy .gt_font_bold {
   font-weight: bold;
 }
 
-#fxylyexvbe .gt_font_italic {
+#kvhitmtedy .gt_font_italic {
   font-style: italic;
 }
 
-#fxylyexvbe .gt_super {
+#kvhitmtedy .gt_super {
   font-size: 65%;
 }
 
-#fxylyexvbe .gt_footnote_marks {
+#kvhitmtedy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fxylyexvbe .gt_asterisk {
+#kvhitmtedy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fxylyexvbe .gt_indent_1 {
+#kvhitmtedy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fxylyexvbe .gt_indent_2 {
+#kvhitmtedy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fxylyexvbe .gt_indent_3 {
+#kvhitmtedy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fxylyexvbe .gt_indent_4 {
+#kvhitmtedy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fxylyexvbe .gt_indent_5 {
+#kvhitmtedy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fxylyexvbe .katex-display {
+#kvhitmtedy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fxylyexvbe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kvhitmtedy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1233,23 +1241,23 @@ ul.task-list li input[type="checkbox"] {
 <p>These quarterbacks generated the most EPA above league average on deep throws. Minimum 25 deep attempts to ensure a stable sample size.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vpiafpghcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vpiafpghcy table {
+<div id="zqatcqakmd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zqatcqakmd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vpiafpghcy thead, #vpiafpghcy tbody, #vpiafpghcy tfoot, #vpiafpghcy tr, #vpiafpghcy td, #vpiafpghcy th {
+#zqatcqakmd thead, #zqatcqakmd tbody, #zqatcqakmd tfoot, #zqatcqakmd tr, #zqatcqakmd td, #zqatcqakmd th {
   border-style: none;
 }
 
-#vpiafpghcy p {
+#zqatcqakmd p {
   margin: 0;
   padding: 0;
 }
 
-#vpiafpghcy .gt_table {
+#zqatcqakmd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1275,12 +1283,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_caption {
+#zqatcqakmd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vpiafpghcy .gt_title {
+#zqatcqakmd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1292,7 +1300,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#vpiafpghcy .gt_subtitle {
+#zqatcqakmd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1304,7 +1312,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#vpiafpghcy .gt_heading {
+#zqatcqakmd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1316,13 +1324,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_bottom_border {
+#zqatcqakmd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_col_headings {
+#zqatcqakmd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1337,7 +1345,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_col_heading {
+#zqatcqakmd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1357,7 +1365,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#vpiafpghcy .gt_column_spanner_outer {
+#zqatcqakmd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1369,15 +1377,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#vpiafpghcy .gt_column_spanner_outer:first-child {
+#zqatcqakmd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vpiafpghcy .gt_column_spanner_outer:last-child {
+#zqatcqakmd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vpiafpghcy .gt_column_spanner {
+#zqatcqakmd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1389,11 +1397,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#vpiafpghcy .gt_spanner_row {
+#zqatcqakmd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vpiafpghcy .gt_group_heading {
+#zqatcqakmd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1419,7 +1427,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#vpiafpghcy .gt_empty_group_heading {
+#zqatcqakmd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1434,15 +1442,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#vpiafpghcy .gt_from_md > :first-child {
+#zqatcqakmd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vpiafpghcy .gt_from_md > :last-child {
+#zqatcqakmd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vpiafpghcy .gt_row {
+#zqatcqakmd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1461,7 +1469,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#vpiafpghcy .gt_stub {
+#zqatcqakmd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1474,7 +1482,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vpiafpghcy .gt_stub_row_group {
+#zqatcqakmd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1488,15 +1496,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#vpiafpghcy .gt_row_group_first td {
+#zqatcqakmd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vpiafpghcy .gt_row_group_first th {
+#zqatcqakmd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vpiafpghcy .gt_summary_row {
+#zqatcqakmd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1506,16 +1514,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vpiafpghcy .gt_first_summary_row {
+#zqatcqakmd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_first_summary_row.thick {
+#zqatcqakmd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vpiafpghcy .gt_last_summary_row {
+#zqatcqakmd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1525,7 +1533,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_grand_summary_row {
+#zqatcqakmd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1535,7 +1543,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vpiafpghcy .gt_first_grand_summary_row {
+#zqatcqakmd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1545,7 +1553,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_last_grand_summary_row_top {
+#zqatcqakmd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1555,11 +1563,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_striped {
+#zqatcqakmd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vpiafpghcy .gt_table_body {
+#zqatcqakmd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1568,7 +1576,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_footnotes {
+#zqatcqakmd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1582,7 +1590,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_footnote {
+#zqatcqakmd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1591,7 +1599,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vpiafpghcy .gt_sourcenotes {
+#zqatcqakmd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1605,7 +1613,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#vpiafpghcy .gt_sourcenote {
+#zqatcqakmd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1613,72 +1621,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#vpiafpghcy .gt_left {
+#zqatcqakmd .gt_left {
   text-align: left;
 }
 
-#vpiafpghcy .gt_center {
+#zqatcqakmd .gt_center {
   text-align: center;
 }
 
-#vpiafpghcy .gt_right {
+#zqatcqakmd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vpiafpghcy .gt_font_normal {
+#zqatcqakmd .gt_font_normal {
   font-weight: normal;
 }
 
-#vpiafpghcy .gt_font_bold {
+#zqatcqakmd .gt_font_bold {
   font-weight: bold;
 }
 
-#vpiafpghcy .gt_font_italic {
+#zqatcqakmd .gt_font_italic {
   font-style: italic;
 }
 
-#vpiafpghcy .gt_super {
+#zqatcqakmd .gt_super {
   font-size: 65%;
 }
 
-#vpiafpghcy .gt_footnote_marks {
+#zqatcqakmd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vpiafpghcy .gt_asterisk {
+#zqatcqakmd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vpiafpghcy .gt_indent_1 {
+#zqatcqakmd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vpiafpghcy .gt_indent_2 {
+#zqatcqakmd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vpiafpghcy .gt_indent_3 {
+#zqatcqakmd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vpiafpghcy .gt_indent_4 {
+#zqatcqakmd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vpiafpghcy .gt_indent_5 {
+#zqatcqakmd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vpiafpghcy .katex-display {
+#zqatcqakmd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vpiafpghcy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zqatcqakmd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1866,6 +1874,18 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 
+</div>
+</div>
+</div>
+</section>
+<section id="qb-agressiveness-vs-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="qb-agressiveness-vs-efficiency">QB Agressiveness vs Efficiency</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/show-aggressiveness-vs-efficiency-1.png" class="img-fluid figure-img" width="1152"></p>
+</figure>
 </div>
 </div>
 </div>
