@@ -211,8 +211,8 @@ qb_vs_league |>
 ```{r show-aggressiveness-vs-efficiency, fig.width=12, fig.height=8}
 qb_summary |>
   ggplot(aes(
-    x = avg_air_yards,
-    y = epa_per_play
+    x = epa_per_play,
+    y = avg_air_yards,
   )) +
   geom_point() +
   geom_text(
@@ -221,16 +221,16 @@ qb_summary |>
     size = 3
   ) +
   geom_vline(
-    xintercept = mean(qb_summary$avg_air_yards),
+    xintercept = mean(qb_summary$epa_per_play),
     linetype = "dashed"
   ) +
   geom_hline(
-    yintercept = mean(qb_summary$epa_per_play),
+    yintercept = mean(qb_summary$avg_air_yards),
     linetype = "dashed"
   ) +
   labs(
     title = "QB Aggressiveness vs Efficiency",
-    x = "Average Air Yards",
-    y = "EPA Per Play"
+    x = "EPA Per Play",
+    y = "Average Air Yards"
   )
 ```
