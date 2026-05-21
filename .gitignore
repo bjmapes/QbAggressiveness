@@ -54,3 +54,7 @@ rsconnect/
 .DS_Store
 
 _site/
+
+index
+
+*_cache/
