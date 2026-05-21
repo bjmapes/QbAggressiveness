@@ -2,6 +2,8 @@
 
 # QB Aggressiveness Model
 
+Before we start, my true objective for this project is to expand my R and data analysis skills. I chose football because it's always easier to learn when related to something you are passionate about. So yes, if anyone happens to read this and reconizes it's not the most original idea, I know. That's not the point. The point is to have fun and learn something new. If I can do that while also analyzing football, then it's a win-win. If you happen to find any mistakes in my code or analysis, please let me know. I'm sure there will be plenty and I would love the feedback to improve. Oh, and Go Birds!
+
 ## Objective
 
 Measure quarterback aggressiveness using:
@@ -17,7 +19,7 @@ Measure quarterback aggressiveness using:
 - Which QBs outperform expected completion probability?
 - How stable are aggressiveness metrics year to year?
 
-## Possible Future Questions
+## Additional Questions to Analyze in the Future
 
 - Which defensive coverages suppress aggressive passing most effectively?
 - Do certain defenses force quarterbacks into shorter, lower-EPA throws?
@@ -33,7 +35,7 @@ Primary metrics:
 - average air yards
 - deep throw rate
 - EPA per attempt
-- completion percentage over expected (CPOE)
+- completion percentage over expected 
 
 The goal is to separate aggressive decision-making from raw efficiency.
 
@@ -51,6 +53,7 @@ knitr::opts_chunk$set(
 library(nflreadr)
 library(tidyverse)
 library(gt)
+library(ggplot2)
 ```
 
 ```{r load-data, cache=TRUE}
@@ -85,9 +88,9 @@ passes <- plays |>
 ```
 
 
-## League Passing Environment
+## League Passing Baselines by Depth
 
-Before evaluating quarterbacks individually, we first establish league-wide baseline performance by throw depth.
+Before evaluating quarterbacks individually we first establish league-wide baseline performance by throw depth.
 
 This helps contextualize:
 
@@ -111,6 +114,10 @@ depth_summary |>
   gt()
 ```
 
+#### Interesting Observations
+ 
+ - Deeper throws have the highest epa but lowest competion percentage. 
+ - Throws behind the line of scrimmage are the only bucket with negative average EPA. 
 
 
 ## QB Aggressiveness Leaderboard
@@ -200,3 +207,30 @@ qb_vs_league |>
   gt()
 ```
 
+## QB Agressiveness vs Efficiency
+```{r show-aggressiveness-vs-efficiency, fig.width=12, fig.height=8}
+qb_summary |>
+  ggplot(aes(
+    x = avg_air_yards,
+    y = epa_per_play
+  )) +
+  geom_point() +
+  geom_text(
+    aes(label = passer_player_name),
+    hjust = -0.1,
+    size = 3
+  ) +
+  geom_vline(
+    xintercept = mean(qb_summary$avg_air_yards),
+    linetype = "dashed"
+  ) +
+  geom_hline(
+    yintercept = mean(qb_summary$epa_per_play),
+    linetype = "dashed"
+  ) +
+  labs(
+    title = "QB Aggressiveness vs Efficiency",
+    x = "Average Air Yards",
+    y = "EPA Per Play"
+  )
+```
