@@ -90,6 +90,7 @@ passes <- plays |>
 Before evaluating quarterbacks individually, we first establish league-wide baseline performance by throw depth.
 
 This helps contextualize:
+
 - how difficult each throw type is
 - expected efficiency at each depth
 - what qualifies as above-average aggressive passing
